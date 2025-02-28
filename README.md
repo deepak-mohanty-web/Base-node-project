@@ -21,33 +21,17 @@ This is a node js project template , which anyone can use as it has been prepare
 
 - `utils`-> contains helper methods, error classes etc.
 
-- Inside the `src/config` folder create a file as `config.json` and write the code as below:-
+- Inside the `src` folder and excute the following command to install all the dependencies:-
 
 ```
-{
-  "development": {
-    "username": "root",
-    "password": null,
-    "database": "database_development",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  },
-  "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  },
-  "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  }
-}
+  npx sequelize init
 ```
 
+- After the above command is executed, you will see a new folder named `migrations` ,`seeder` and `config/config.json` inside the `src` folder.
 - If you are setting up your development ,then write the username of your db, password of your db and in dialect mention what you are using for ex: mysql,mariadb etc.
 - If you are setting up test or prod environment, make sure also replace host with the host of your db.
+
+ - To run the server excute
+ ```
+ npm run dev
+ ```

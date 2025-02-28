@@ -17,6 +17,37 @@ This is a node js project template , which anyone can use as it has been prepare
 - `controllers` -> They are kind of the last middleware as post them you call you bussiness layer to excute the bussiness logic. In controllers we just receive the incoming request and the data and then pass it in to then bussiness layer, and once busiess layer return an output , we structure the API response in controllers and send them to output.
 - `repositories` -> This folder comtain all logic using which we interact the DB by writing queries, all the raw queries or ORM queries will go here.
 
-- `services`-> contains the business logic and interacts with repoitories for data from  the database.
+- `services`-> contains the business logic and interacts with repoitories for data from the database.
 
 - `utils`-> contains helper methods, error classes etc.
+
+- Inside the `src/config` folder create a file as `config.json` and write the code as below:-
+
+```
+{
+  "development": {
+    "username": "root",
+    "password": null,
+    "database": "database_development",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
+```
+
+- If you are setting up your development ,then write the username of your db, password of your db and in dialect mention what you are using for ex: mysql,mariadb etc.
+- If you are setting up test or prod environment, make sure also replace host with the host of your db.
